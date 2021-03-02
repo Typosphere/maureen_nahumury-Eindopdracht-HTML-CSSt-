@@ -1,0 +1,150 @@
+@import url('https://fonts.google.com/?query=twentie');
+
+body {
+    margin: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "head"
+        "nav"
+        "main"
+        "footer";
+}
+
+img{
+    max-width: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*<-----nav----->*/
+
+nav{
+    display: flex;
+    background: none;
+    width: auto;
+    margin-top:5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+}
+
+li{
+    display:block;
+}
+
+nav a{
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display:inline;
+    height: 40px;
+
+    cursor: pointer;
+
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color:white;
+    background-color: #5CAFBC;
+}
+
+/*<-----header & background image----->*/
+
+header {
+    height: 45vh;
+    padding: 15px;
+    color:white;
+    font-size: 1.5rem;
+    font-family: "LTC Twentieth Century", sans-serif;
+    text-shadow:3px 3px 3px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(../image/Webinar.JPG);
+    background-size: cover;
+    background-position: center center;
+}
+ 
+/*<-----form----->*/
+
+.registration {
+    font-size: x-large;
+    color: #aa6060;
+    font-family: "LTC Twentieth Century", sans-serif;
+  }
+  
+.sendbutton {
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin-bottom: 15px;
+    background-color: #aa6060;
+    color: white;
+    text-align: center;
+    line-height: 39px;
+  }
+  
+.sendbutton:hover {
+    background-color: #69ceec;
+  }
+  
+form {
+    display: inline;
+    width: 740px;
+    height: 498px;
+}
+
+/*<-----footer----->*/
+
+.footer {
+    background-color: #5CAFBC;
+    color: white;
+    padding: 20px;
+    font-size: 1rem;
+    font-family:"Twentie", sans-serif;
+    text-align: center;
+}
+
+/*<-----media queries----->*/
+
+@media screen and (min-width: 450px){
+    .logo{
+        display: inline;
+    }
+
+    li{
+       display: inline;
+    }
+
+    h1{
+       font-size: 3.5rem;
+    }
+
+    nav{
+    justify-content: flex-start;
+    }
+   
+}
+
+@media screen and (min-width: 1024px){
+    nav{
+        justify-content: flex-end;
+     }
+
+}
